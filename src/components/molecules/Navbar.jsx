@@ -19,7 +19,7 @@ const Navbar = () => {
   const [theme, setTheme] = useState(true);
   return (
     <StyledNav>
-      <Typography textColor={"pink"} size="20">
+      <Typography textColor={"cyan"} size="20">
         Axel inc!
       </Typography>
       <div className="flex-spaced" style={{ width: "8rem" }}>

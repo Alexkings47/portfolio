@@ -2,13 +2,7 @@ import React, { ButtonHTMLAttributes } from "react";
 import styled from "styled-components";
 import {pxToEm} from "../../utils"
 
-interface Props {
-  content?: string;
-  loading?: { loader: any; state: boolean } | boolean;
-  secondary?: boolean;
-}
 
-export type ButtonProps = Props & ButtonHTMLAttributes<HTMLButtonElement>;
 
 const StyledButton = styled.button`
   all: unset;
@@ -19,12 +13,12 @@ const StyledButton = styled.button`
   text-align: center;
   font-size: ${pxToEm(20)};
   font-weight: 500;
-  background-color: var(--blue);
+  background-color: var(--green);
   border-radius: 29px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "karla", sans-serif;
   color: white;
 `;
 
-export const Button = ({ text, children }) => {
-  return <StyledButton>{text || children}</StyledButton>;
+export const Button = ({ text, children, style, ...rest }) => {
+  return <StyledButton style={{...rest}}>{text || children}</StyledButton>;
 };

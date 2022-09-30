@@ -6,7 +6,7 @@
  *  use browsers fontsize => true = 'rem'
  *  use parent fontsize => false = 'em'
  */
-export const pxToEm = (pixel: string | number, root = true) => {
+export const pxToEm = (pixel, root = true) => {
   if (pixel) {
     const px = +pixel
       .toString()
