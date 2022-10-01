@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { BsSun, BsMoon } from "react-icons/bs";
+import { BsFillSunFill, BsMoon } from "react-icons/bs";
 import { RiMenu5Fill } from "react-icons/ri";
 import { Typography } from "../atoms/Typography/Typography";
 
@@ -9,6 +9,8 @@ const StyledNav = styled.nav`
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  padding: 2rem 4rem 10px;
+  height: 5rem;
 
   span {
     font-size: 40px;
@@ -27,7 +29,7 @@ const Navbar = () => {
           onClick={() => setTheme(!theme)}
           style={{ color: theme ? "white" : "cyan" }}
         >
-          {theme ? <BsSun /> : <BsMoon />}
+          {theme ? <BsFillSunFill /> : <BsMoon />}
         </span>
         <span>
           <RiMenu5Fill />

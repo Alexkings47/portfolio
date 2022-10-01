@@ -3,11 +3,12 @@ import React from "react";
 export const Typography = ({
   textColor,
   variant,
+  className,
   size,
   content,
   children,
   weight,
-  ...props
+  style,
 }) => {
   return (
     <p
@@ -15,7 +16,12 @@ export const Typography = ({
         color: `var(--${textColor})`,
         fontSize: `${size}px`,
         fontWeight: weight,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "flex-start",
+        ...style,
       }}
+      className={className}
     >
       {content} {children}
     </p>
@@ -39,6 +45,9 @@ export const TextHeading = ({
         color: `var(--${textColor})`,
         fontSize: `${size}px`,
         fontWeight: weight,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "flex-start",
         ...style,
       },
     },

@@ -7,7 +7,7 @@
 :root {
   --black: #131313;
   --white: white;
-  --blue: #000e27;
+  --blue: #091066;
   --light-blue: #3a86ff;
   --cyan: #0ee6d7;
   --med-gray: #909090;
@@ -20,6 +20,9 @@
   --pink: #ffc0cb;
   --golden: #f5e689;
   --green: #4da406;
+  --purple: #13022d;
+  --grey-text: #dad8d83d;
+  
 }
 
 .flex-spaced {
@@ -28,7 +31,7 @@
   justify-content: space-between;
 }
 
-.flex-column-spaced {
+.flex-column-spaced  {
   display: flex;
   align-items: center;
   justify-content: space-between;

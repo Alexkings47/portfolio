@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes } from "react";
+import React from "react";
 import styled from "styled-components";
 import {pxToEm} from "../../utils"
 
@@ -8,17 +8,22 @@ const StyledButton = styled.button`
   all: unset;
   cursor: pointer;
   position: relative;
-  padding: ${pxToEm(14)} ${pxToEm(82)};
+  padding: ${pxToEm(10)} ${pxToEm(30)};
   text-transform: capitalize;
   text-align: center;
   font-size: ${pxToEm(20)};
   font-weight: 500;
-  background-color: var(--green);
-  border-radius: 29px;
+  border: 1px solid var(--cyan);
+  /* border-radius: 29px; */
   font-family: "karla", sans-serif;
-  color: white;
+  color: var(--cyan);
+
+  &:hover {
+    background-color: var(--cyan);
+    color: var(--grey-3);
+  }
 `;
 
-export const Button = ({ text, children, style, ...rest }) => {
-  return <StyledButton style={{...rest}}>{text || children}</StyledButton>;
+export const Button = ({ text, children, style, }) => {
+  return <StyledButton style={{...style}}>{text || children}</StyledButton>;
 };
