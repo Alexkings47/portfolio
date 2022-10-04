@@ -1,10 +1,10 @@
 import React from "react";
-import { Typography } from "../../components/atoms/Typography/Typography";
+import { TextHeading, Typography } from "../../components/atoms/Typography/Typography";
 import styled from "styled-components";
 import alex from "../../assets/alex.jpeg";
 
 const StyledDiv = styled.div`
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 6rem;
   color: var(--gray-3);
   font-family: "Karla";
   font-size: 18px;
@@ -25,7 +25,17 @@ const StyledDiv = styled.div`
     font-weight: 600;
     color: var(--white);
   }
-
+  .skills {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    padding-left: 1rem;
+    color: var(--gray);
+    font-size: 16px;
+    text-transform: uppercase;
+    /* list-style-image:  */
+  }
   .skills-link,
   .skills-link:visited,
   .skills-link:link {
@@ -50,7 +60,7 @@ const StyledDiv = styled.div`
 const AboutMe = () => {
   return (
     <StyledDiv>
-      <Typography
+      <TextHeading
         content=" About Me"
         size="120"
         weight="600"
@@ -60,13 +70,14 @@ const AboutMe = () => {
       <div className="content flex-spaced">
         <div className="aboutme-text flex-column-spaced ">
           <p style={{ width: "65%" }}>
+            <p></p>
             I'm a Software engineer skilled at replicating user interface
             designs into functional code. I have an in-depth understanding of
             HTML, CSS, JavaScript, and user interface/user experience
             fundamentals.
             <br />
             <br />
-            In addition
+            In addition &nbsp;
             <a className="skills-link" href="*">
               to my technical skills
             </a>
@@ -80,10 +91,12 @@ const AboutMe = () => {
 
           <Typography
             content="Here are a few technologies I’ve been working with recently:"
-            style={{ color: "var(--grey)" }}
+            style={{ color: "var(--grey)" , paddingTop: "1.5rem"}}
           />
           <ul className="skills">
-            <li>JavaScript [ES 6+]</li>
+            <li>
+              JavaScript <span style={{ color: "cyan" }}>(ES 6+)</span>
+            </li>
             <li>React</li>
             <li>Html</li>
             <li>TypeScript</li>

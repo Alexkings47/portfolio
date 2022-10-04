@@ -8,14 +8,15 @@ const StyledButton = styled.button`
   all: unset;
   cursor: pointer;
   position: relative;
-  padding: ${pxToEm(10)} ${pxToEm(30)};
+  padding: ${pxToEm(8)} ${pxToEm(28)};
   text-transform: capitalize;
   text-align: center;
   font-size: ${pxToEm(20)};
   font-weight: 500;
+  font-size: 16px;
   border: 1px solid var(--cyan);
   /* border-radius: 29px; */
-  font-family: "karla", sans-serif;
+  font-family: "Karla", sans-serif;
   color: var(--cyan);
 
   &:hover {

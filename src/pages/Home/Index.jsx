@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import Featured from "../../components/Featured/Featured";
 import Navbar from "../../components/molecules/Navbar";
 import Container from "../../components/organisms/Container";
 import AboutMe from "./AboutMe";
+import Contactme from "./Contactme";
 import Header from "./Header";
 
 const StyledMain = styled.main`
@@ -25,6 +27,12 @@ const Home = () => {
       </Container>
       <Container>
         <AboutMe />
+      </Container>
+      <Container>
+        <Featured />
+      </Container>
+      <Container>
+        <Contactme />
       </Container>
     </StyledMain>
   );

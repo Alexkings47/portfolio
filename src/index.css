@@ -21,7 +21,7 @@
   --golden: #f5e689;
   --green: #4da406;
   --purple: #13022d;
-  --grey-text: #dad8d83d;
+  --grey-text: #5b57573d;
   
 }
 
@@ -36,4 +36,9 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+}
+
+button{
+  background: none;
+  border: none;
 }
