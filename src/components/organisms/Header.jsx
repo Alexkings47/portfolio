@@ -5,7 +5,6 @@ import {
   Typography,
 } from "../../components/atoms/Typography/Typography";
 import bgimg from "../../assets/backgroundleft.png";
-// import bgimg from "../../assets/angelo.png";
 import hand from "../../assets/wavinghand.png";
 import { pxToEm } from "../../utils";
 import { Button } from "../../components/atoms/Button";
@@ -45,7 +44,6 @@ const StyledHeader = styled.header`
     font-family: "Poppins", sans-serif;
     align-items: flex-start;
     width: 100%;
-    /* border: 1px solid red; */
   }
 `;
 

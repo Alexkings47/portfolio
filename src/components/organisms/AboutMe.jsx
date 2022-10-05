@@ -1,5 +1,5 @@
 import React from "react";
-import { TextHeading, Typography } from "../../components/atoms/Typography/Typography";
+import { TextHeading, Typography } from "../atoms/Typography/Typography";
 import styled from "styled-components";
 import alex from "../../assets/alex.jpeg";
 
@@ -17,6 +17,9 @@ const StyledDiv = styled.div`
   .about-me::after {
     content: "ABOUT ME";
     position: absolute;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--cyan);
     top: 50%;
     left: 0;
     transform: translateY(-50%);

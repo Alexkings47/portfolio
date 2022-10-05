@@ -22,7 +22,6 @@
   --green: #4da406;
   --purple: #13022d;
   --grey-text: #5b57573d;
-  
 }
 
 .flex-spaced {
@@ -31,14 +30,21 @@
   justify-content: space-between;
 }
 
-.flex-column-spaced  {
+.flex-column-spaced {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
 }
 
-button{
+button {
   background: none;
   border: none;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: unset;
 }

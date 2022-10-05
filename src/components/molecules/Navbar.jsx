@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { BsFillSunFill, BsMoon } from "react-icons/bs";
-import { RiMenu5Fill } from "react-icons/ri";
+import { CgMenuRightAlt } from "react-icons/cg";
+import { GiQueenCrown } from "react-icons/gi";
 import { Typography } from "../atoms/Typography/Typography";
 
 const StyledNav = styled.nav`
@@ -21,8 +22,8 @@ const Navbar = () => {
   const [theme, setTheme] = useState(true);
   return (
     <StyledNav>
-      <Typography textColor={"cyan"} size="20">
-        &lt;Axel inc!&gt;
+      <Typography textColor={"cyan"} size="30">
+        <GiQueenCrown />
       </Typography>
       <div className="flex-spaced" style={{ width: "8rem" }}>
         <span
@@ -32,7 +33,7 @@ const Navbar = () => {
           {theme ? <BsFillSunFill /> : <BsMoon />}
         </span>
         <span>
-          <RiMenu5Fill />
+          <CgMenuRightAlt />
         </span>
       </div>
     </StyledNav>

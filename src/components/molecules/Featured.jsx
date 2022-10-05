@@ -2,9 +2,32 @@ import React from "react";
 import styled from "styled-components";
 import bouncer from "../../assets/bouncer.png";
 import zenus from "../../assets/zenus.png";
-import FeaturedCard from "./FeaturedCard";
+import { TextHeading } from "../atoms/Typography/Typography";
+import FeaturedCard from "../Featured/FeaturedCard";
 
-const StyledSection = styled.section``;
+const StyledSection = styled.section`
+  .about-me {
+    position: relative;
+    z-index: 0;
+    margin-bottom: 3rem;
+    text-align: left;
+    align-self: flex-start;
+  }
+  .about-me::after {
+    content: "Featured Projects";
+    position: absolute;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--cyan);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--white);
+  }
+`;
 
 const List = [
   {
@@ -23,8 +46,16 @@ const List = [
 
 const Featured = () => {
   return (
-    <StyledSection className="flex-column-spaced" style={{margin: "5rem 0"}}>
-      {List.map((item)=>{
+    <StyledSection className="flex-column-spaced" style={{ margin: "5rem 0" }}>
+      <TextHeading
+        content="Featured Projects"
+        size="120"
+        weight="600"
+        className="about-me"
+        textColor="grey-text"
+      />{" "}
+      <TextHeading />
+      {List.map((item) => {
         return (
           <FeaturedCard
             title={item.title}
@@ -34,8 +65,6 @@ const Featured = () => {
           />
         );
       })}
-      
-   
     </StyledSection>
   );
 };

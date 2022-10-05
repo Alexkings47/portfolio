@@ -2,7 +2,6 @@ import React from "react";
 
 export const Typography = ({
   textColor,
-  variant,
   className,
   size,
   content,
@@ -44,7 +43,7 @@ export const TextHeading = ({
   return React.createElement(
     `h${level}`,
     {
-      className:className,  
+      className: className,
       style: {
         color: `var(--${textColor})`,
         fontSize: `${size}px`,
