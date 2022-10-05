@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Featured from "../../components/molecules/Featured";
+import Featured from "../../components/organisms/Featured/Featured";
 import Navbar from "../../components/molecules/Navbar";
 import Container from "../../components/organisms/Container";
 import { SocialMedia } from "../../components/organisms/SocialMedia";

@@ -22,7 +22,7 @@ const Navbar = () => {
   const [theme, setTheme] = useState(true);
   return (
     <StyledNav>
-      <Typography textColor={"cyan"} size="30">
+      <Typography textColor={"cyan"} size="40">
         <GiQueenCrown />
       </Typography>
       <div className="flex-spaced" style={{ width: "8rem" }}>

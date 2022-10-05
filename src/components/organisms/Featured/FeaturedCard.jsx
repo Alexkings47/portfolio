@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Typography } from "../atoms/Typography/Typography";
+import { Typography } from "../../atoms/Typography/Typography";
 import { VscGithubAlt } from "react-icons/vsc";
 import { FiExternalLink } from "react-icons/fi";
 

@@ -16,7 +16,7 @@ const StyledHeader = styled.header`
   width: 100%;
   height: calc(100vh - 50px);
   justify-content: space-between;
-  background: url(${bgimg}) no-repeat 100% 50%;
+  /* background: url(${bgimg}) no-repeat 100% 50%; */
   background-size: 20rem;
   position: relative;
 

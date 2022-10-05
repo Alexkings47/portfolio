@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import bouncer from "../../assets/bouncer.png";
-import zenus from "../../assets/zenus.png";
-import { TextHeading } from "../atoms/Typography/Typography";
-import FeaturedCard from "../Featured/FeaturedCard";
+import bouncer from "../../../assets/bouncer.png";
+import zenus from "../../../assets/zenus.png";
+import { TextHeading } from "../../atoms/Typography/Typography";
+import FeaturedCard from "./FeaturedCard";
 
 const StyledSection = styled.section`
   .about-me {

@@ -15,7 +15,7 @@ const StyledButton = styled.button`
   font-weight: 500;
   font-size: 16px;
   border: 1px solid var(--cyan);
-  /* border-radius: 29px; */
+  border-radius: 29px;
   font-family: "Karla", sans-serif;
   color: var(--cyan);
 
