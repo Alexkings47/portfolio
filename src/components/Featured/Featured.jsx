@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import bouncer from "../../assets/bouncer.png";
+import zenus from "../../assets/zenus.png";
 import FeaturedCard from "./FeaturedCard";
 
 const StyledSection = styled.section``;
@@ -8,20 +9,33 @@ const StyledSection = styled.section``;
 const List = [
   {
     skills: ["VS Code", "Sublime Text", "Atom", "iTerm2", "Hyper"],
-    desc: "A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.",
+    desc: "An e-commerce platform that automates the process of buying and selling goods and services, built with React JS, Typescript, react-redux, and Git",
+    title: "Bouncer",
+    imgUrl: bouncer,
+  },
+  {
+    skills: ["VS Code", "Sublime Text", "Atom", "iTerm2", "Hyper"],
+    desc: "An e-commerce platform that automates the process of buying and selling goods and services, built with React JS, Typescript, react-redux, and Git",
+    title: "Zenus Estate Financials",
+    imgUrl: zenus,
   },
 ];
 
 const Featured = () => {
   return (
     <StyledSection className="flex-column-spaced">
-      <FeaturedCard
-        title="Item 1"
-        imgUrl={bouncer}
-        content={List[0].skills}
-        desc={List[0].desc}
-      />
-      {/* <FeaturedCard /> */}
+      {List.map((item)=>{
+        return (
+          <FeaturedCard
+            title={item.title}
+            imgUrl={item.imgUrl}
+            content={item.skills}
+            desc={item.desc}
+          />
+        );
+      })}
+      
+   
     </StyledSection>
   );
 };
