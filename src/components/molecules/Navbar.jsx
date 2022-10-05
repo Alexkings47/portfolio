@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <StyledNav>
       <Typography textColor={"cyan"} size="20">
-        Axel inc!
+        &lt;Axel inc!&gt;
       </Typography>
       <div className="flex-spaced" style={{ width: "8rem" }}>
         <span

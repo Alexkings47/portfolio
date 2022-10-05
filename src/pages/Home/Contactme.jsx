@@ -6,11 +6,10 @@ import { TextHeading } from "../../components/atoms/Typography/Typography";
 
 const Contactme = () => {
   return (
-    <div>
-      <div className="contact">
-        <TextHeading content="Got a Project or Job for me"  size="100"/>
-        <TextHeading content="Got a Project or Job for me"  size="100"/>
-        <TextHeading content="Got a Project or Job for me"  size="100"/>
+    <div className="contact flexed-space">
+      <TextHeading content="Got a Project or Job for me" size="70" />
+      <div className="contact-details">
+        <TextHeading content="alexezetech@gmail.com" size="24" />
       </div>
     </div>
   );

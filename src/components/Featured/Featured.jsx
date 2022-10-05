@@ -23,7 +23,7 @@ const List = [
 
 const Featured = () => {
   return (
-    <StyledSection className="flex-column-spaced">
+    <StyledSection className="flex-column-spaced" style={{margin: "5rem 0"}}>
       {List.map((item)=>{
         return (
           <FeaturedCard

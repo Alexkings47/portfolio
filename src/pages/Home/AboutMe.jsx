@@ -69,8 +69,8 @@ const AboutMe = () => {
       />
       <div className="content flex-spaced">
         <div className="aboutme-text flex-column-spaced ">
-          <p style={{ width: "65%" }}>
-            <p></p>
+          <p style={{ width: "65%", lineHeight: "30px" }}>
+            
             I'm a Software engineer skilled at replicating user interface
             designs into functional code. I have an in-depth understanding of
             HTML, CSS, JavaScript, and user interface/user experience

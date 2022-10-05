@@ -10,13 +10,14 @@ import Header from "./Header";
 
 const StyledMain = styled.main`
   position: relative;
-  .space {
+
+  /* .space {
     position: absolute;
     top: 30%;
     left: 30%;
     width: 70%;
     z-index: -1;
-  }
+  } */
 `;
 
 const Home = () => {
