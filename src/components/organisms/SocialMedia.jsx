@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Typography } from "../atoms/Typography/Typography";
 import { VscGithubAlt } from "react-icons/vsc";
-import { FiExternalLink } from "react-icons/fi";
 import { BsInstagram } from "react-icons/bs";
 import { FiLinkedin, FiTwitter } from "react-icons/fi";
 
@@ -20,7 +18,7 @@ const StyledDiv = styled.div`
   position: fixed;
   top: 2rem;
   left: 0;
-  margin-left: -10rem;
+  margin-left: -11rem;
   animation: move linear 4s none infinite;
   animation-delay: 3000ms;
 
@@ -32,38 +30,44 @@ const StyledDiv = styled.div`
     border-bottom: 1px solid white;
     height: 1px;
     width: 60vh;
-    margin-bottom: 14rem;
+    margin-bottom: 15rem;
   }
 `;
 
-const SocialMedia = () => {
+export const SocialMedia = ({className }) => {
   return (
-    <StyledDiv className="flex-column-spaced">
-      <div className="horizontal-line"></div>
-      <div className="flex-column-spaced">
-        <a href="." style={{ color: "white" }} className="media-icons">
-          {" "}
-          <VscGithubAlt />
-        </a>
-        <a href="." style={{ color: "purple" }} className="media-icons">
-          {" "}
-          <BsInstagram />
-        </a>
-        <a href="." style={{ color: "var(--cyan)" }} className="media-icons">
-          {" "}
-          <FiLinkedin />
-        </a>
-        <a
-          href="."
-          style={{ color: "var(--light-blue)" }}
-          className="media-icons"
-        >
-          {" "}
-          <FiTwitter />
-        </a>
-      </div>
+    <StyledDiv className={`flex-column-spaced`}>
+     <div className="horizontal-line"></div>
+    <MediaIcons className={className}/>
     </StyledDiv>
   );
 };
 
-export default SocialMedia;
+export const MediaIcons = ({className}) => {
+  return (
+    <div className={className || "flex-column-spaced"}>
+      <a href="." style={{ color: "white" }} className="media-icons">
+        {" "}
+        <VscGithubAlt />
+      </a>
+      <a href="." style={{ color: "purple" }} className="media-icons">
+        {" "}
+        <BsInstagram />
+      </a>
+      <a href="." style={{ color: "var(--cyan)" }} className="media-icons">
+        {" "}
+        <FiLinkedin />
+      </a>
+      <a
+        href="."
+        style={{ color: "var(--light-blue)" }}
+        className="media-icons"
+      >
+        {" "}
+        <FiTwitter />
+      </a>
+    </div>
+  );
+};
+
+
