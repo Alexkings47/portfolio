@@ -10,7 +10,7 @@ const StyledNav = styled.nav`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 2rem 4rem 10px;
+  padding: 2rem 0 10px;
   height: 5rem;
 
   span {

@@ -12,7 +12,7 @@ import { HiOutlineArrowNarrowDown } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 const StyledHeader = styled.header`
-  padding: 8rem 1rem 3rem;
+  padding: 8rem 0 3rem;
   width: 100%;
   height: calc(100vh - 50px);
   justify-content: space-between;
@@ -41,9 +41,20 @@ const StyledHeader = styled.header`
   }
 
   .header-text {
-    font-family: "Poppins", sans-serif;
+    /* font-family: "Poppins", sans-serif; */
     align-items: flex-start;
     width: 100%;
+  }
+
+  .description {
+    margin-bottom: ${pxToEm(20)};
+    width: ${pxToEm(480)};
+  }
+
+  @media (max-width: 550px) {
+    .description {
+      width: 90%;
+    }
   }
 `;
 
@@ -77,14 +88,7 @@ const Header = () => {
           Software Engineer & Content Writer
           {/* <img src={laptop} alt="waving hand" style={{ width: "50px" }} /> */}
         </Typography>
-        <Typography
-          size="18"
-          style={{
-            marginBottom: `${pxToEm(20)}`,
-            width: "45%",
-          }}
-          textColor="gray"
-        >
+        <Typography size="18" textColor="gray" className="description">
           I am an innovative front-end developer with a stiff inclination for
           best practices. Fasten your seat beats as you embark on my
           roller-coaster ride...

@@ -2,9 +2,10 @@ import React from "react";
 import { TextHeading, Typography } from "../atoms/Typography/Typography";
 import styled from "styled-components";
 import alex from "../../assets/alex.jpeg";
+import { pxToEm } from "../../utils";
 
 const StyledDiv = styled.div`
-  padding: 2rem 1rem 6rem;
+  padding: 2rem 0 6rem;
   color: var(--gray-3);
   font-family: "Karla";
   font-size: 18px;
@@ -12,11 +13,12 @@ const StyledDiv = styled.div`
   .about-me {
     position: relative;
     z-index: 0;
-    margin-bottom: 3rem;
+    font-size: 120px;
   }
   .about-me::after {
     content: "ABOUT ME";
     position: absolute;
+    line-height: 100%;
     text-transform: uppercase;
     padding-bottom: 10px;
     border-bottom: 2px solid var(--cyan);
@@ -48,6 +50,9 @@ const StyledDiv = styled.div`
   .aboutme-text {
     align-items: flex-start;
   }
+  .content {
+    align-items: flex-start;
+  }
   .my-image {
     width: 18rem;
     border-radius: 15px;
@@ -58,6 +63,29 @@ const StyledDiv = styled.div`
       filter: unset;
     }
   }
+
+  @media (max-width: "") {
+    
+  }
+
+  @media (max-width: 600px) {
+    .about-me {
+      font-size: 90px;
+      align-items: center;
+
+      &::after{
+        font-size: 24px;
+        padding-bottom: unset;
+      }
+    }
+    .content {
+      flex-direction: column;
+      align-items: center;
+    }
+    .my-image {
+      width: 14rem;
+    }
+  }
 `;
 
 const AboutMe = () => {
@@ -65,15 +93,14 @@ const AboutMe = () => {
     <StyledDiv>
       <TextHeading
         content=" About Me"
-        size="120"
         weight="600"
         className="about-me"
         textColor="grey-text"
+        style={{justifyContent: "center",    marginBottom: "3rem"}}
       />
       <div className="content flex-spaced">
         <div className="aboutme-text flex-column-spaced ">
-          <p style={{ width: "65%", lineHeight: "30px" }}>
-            
+          <p style={{ width: `80%`, lineHeight: "30px" }}>
             I'm a Software engineer skilled at replicating user interface
             designs into functional code. I have an in-depth understanding of
             HTML, CSS, JavaScript, and user interface/user experience
@@ -94,7 +121,7 @@ const AboutMe = () => {
 
           <Typography
             content="Here are a few technologies I’ve been working with recently:"
-            style={{ color: "var(--grey)" , paddingTop: "1.5rem"}}
+            style={{ color: "var(--grey)", paddingTop: "1.5rem" }}
           />
           <ul className="skills">
             <li>

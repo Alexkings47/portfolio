@@ -10,7 +10,7 @@ import Header from "../../components/organisms/Header";
 
 const StyledMain = styled.main`
   position: relative;
-  /* padding-bottom: 3rem; */
+  padding:0 3rem;
   /* .space {
     position: absolute;
     top: 30%;
@@ -23,7 +23,7 @@ const StyledMain = styled.main`
 const Home = () => {
   return (
     <StyledMain>
-      <SocialMedia />
+      {/* <SocialMedia /> */}
       <Navbar />
       <Container>
         <Header />
