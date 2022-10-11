@@ -24,6 +24,21 @@ const StyledSection = styled.section`
     color: var(--purple);
     border-radius: 5px;
   }
+  .contact-details {
+    height: 15rem;
+    align-items: flex-end;
+    padding-left: 1rem;
+  }
+  @media (max-width: 700px) {
+    flex-direction: column;
+    justify-content: space-between;
+
+    .contact-details {
+      align-items: center;
+      margin-top: 2rem;
+      padding-left: unset;
+    }
+  }
 `;
 
 const ContactMe = () => {
@@ -32,7 +47,7 @@ const ContactMe = () => {
       <div className="contact-titles flex-column-spaced">
         <TextHeading
           size="70"
-          style={{ textTransform: "capitalize", textAlign: "center" }}
+          style={{ textTransform: "capitalize", textAlign: "center", lineHeight: "" }}
         >
           Want to Start <br /> A new <br /> project
         </TextHeading>
@@ -43,10 +58,7 @@ const ContactMe = () => {
           weight="500"
         />
       </div>
-      <div
-        className="contact-details flex-column-spaced"
-        style={{ height: "15rem", alignItems: "flex-start" }}
-      >
+      <div className="contact-details flex-column-spaced">
         <a href="mailto: alexezetech@gmail.com">
           <Typography content="alexezetech@gmail.com" size="24" weight="500" />
         </a>

@@ -1,10 +1,5 @@
-
-
-
 .App-header {
-  background-color: var(--purple);
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   /* font-size: calc(10px + 2vmin); */
-  color: white; 
-
+  color: white;
 }

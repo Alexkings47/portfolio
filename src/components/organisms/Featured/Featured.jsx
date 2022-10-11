@@ -55,13 +55,14 @@ const Featured = () => {
         textColor="grey-text"
       />{" "}
       <TextHeading />
-      {List.map((item) => {
+      {List.map((item, index) => {
         return (
           <FeaturedCard
             title={item.title}
             imgUrl={item.imgUrl}
             content={item.skills}
             desc={item.desc}
+            key={index}
           />
         );
       })}

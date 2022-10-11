@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import {
   TextHeading,
   Typography,
 } from "../../components/atoms/Typography/Typography";
-import bgimg from "../../assets/backgroundleft.png";
+
 import hand from "../../assets/wavinghand.png";
 import { pxToEm } from "../../utils";
 import { Button } from "../../components/atoms/Button";
@@ -16,7 +16,7 @@ const StyledHeader = styled.header`
   width: 100%;
   height: calc(100vh - 50px);
   justify-content: space-between;
-  /* background: url(${bgimg}) no-repeat 100% 50%; */
+
   background-size: 20rem;
   position: relative;
 
@@ -41,7 +41,6 @@ const StyledHeader = styled.header`
   }
 
   .header-text {
-    /* font-family: "Poppins", sans-serif; */
     align-items: flex-start;
     width: 100%;
   }
@@ -51,29 +50,53 @@ const StyledHeader = styled.header`
     width: ${pxToEm(480)};
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 650px) {
     .description {
-      width: 90%;
+      width: 100%;
+    }
+    justify-content: center;
+    .header-text {
+     height: 70%;
     }
   }
 `;
+function debounce(fn, ms) {
+  let timer;
+  return () => {
+    clearTimeout(timer);
+    timer = setTimeout(fn, ms);
+  };
+}
 
 const Header = () => {
+  const [screen, setScreen] = useState(window.innerWidth);
+  useEffect(() => {
+    const debouncedHandleResize = debounce(function resize() {
+      setScreen(window.innerWidth);
+    }, 1000);
+
+    window.addEventListener("resize", debouncedHandleResize);
+
+    return () => {
+      window.removeEventListener("resize", debouncedHandleResize);
+    };
+  }, []);
+
   return (
-    <StyledHeader className="flex-column-spaced">
+    <StyledHeader  className="flex-column-spaced">
       <div className="header-text flex-column-spaced">
-        <Typography size={24} weight="600">
+        <Typography size="18" weight="600">
           Hi there,
           <img src={hand} alt="waving hand" style={{ width: "50px" }} />
           i'm
         </Typography>
         <TextHeading
-          content={"samson."}
+          content={"Samson eze"}
           level="1"
-          size={80}
+          size={screen <= 650 ? 50 : 80}
           style={{
             lineHeight: "99%",
-            marginLeft: "-10px",
+            // marginLeft: "-10px",
             marginBottom: `${pxToEm(10)}`,
           }}
         />
@@ -97,9 +120,6 @@ const Header = () => {
       </div>
       {/* <div className="header-image" style={{ width: "35%" }}></div> */}
       {/* </div> */}
-      <div
-        style={{ width: "100%", borderBottom: `1px solid var(--gray)` }}
-      ></div>
       <Link className="arrow-trans">
         <HiOutlineArrowNarrowDown />
       </Link>

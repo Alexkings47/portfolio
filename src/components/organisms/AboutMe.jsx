@@ -2,20 +2,20 @@ import React from "react";
 import { TextHeading, Typography } from "../atoms/Typography/Typography";
 import styled from "styled-components";
 import alex from "../../assets/alex.jpeg";
-import { pxToEm } from "../../utils";
 
-const StyledDiv = styled.div`
+const StyledSection = styled.section`
   padding: 2rem 0 6rem;
   color: var(--gray-3);
   font-family: "Karla";
   font-size: 18px;
 
-  .about-me {
+  .title {
     position: relative;
     z-index: 0;
     font-size: 120px;
+    margin-bottom: 3rem;
   }
-  .about-me::after {
+  .title::after {
     content: "ABOUT ME";
     position: absolute;
     line-height: 100%;
@@ -30,31 +30,8 @@ const StyledDiv = styled.div`
     font-weight: 600;
     color: var(--white);
   }
-  .skills {
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
-    padding-left: 1rem;
-    color: var(--gray);
-    font-size: 16px;
-    text-transform: uppercase;
-    /* list-style-image:  */
-  }
-  .skills-link,
-  .skills-link:visited,
-  .skills-link:link {
-    color: var(--cyan);
-    text-decoration: none;
-  }
-  .aboutme-text {
-    align-items: flex-start;
-  }
-  .content {
-    align-items: flex-start;
-  }
   .my-image {
-    width: 18rem;
+    width: 20rem;
     border-radius: 15px;
     position: relative;
     filter: saturate(50%);
@@ -64,41 +41,67 @@ const StyledDiv = styled.div`
     }
   }
 
-  @media (max-width: "") {
-    
+  .skills {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    padding-left: 1rem;
+    color: var(--gray);
+    font-size: 16px;
+    text-transform: uppercase;
+    list-style-type: none;
   }
 
-  @media (max-width: 600px) {
+  .skills-link,
+  .skills-link:visited,
+  .skills-link:link {
+    color: var(--cyan);
+    text-decoration: none;
+  }
+  .aboutme-text {
+    align-items: flex-start;
+  }
+  .about-content {
+    align-items: flex-start;
+  }
+
+  @media (max-width: 650px) {
     .about-me {
       font-size: 90px;
       align-items: center;
 
-      &::after{
+      &::after {
         font-size: 24px;
         padding-bottom: unset;
       }
     }
-    .content {
+    .about-content {
       flex-direction: column;
       align-items: center;
     }
     .my-image {
       width: 14rem;
     }
+    .title{
+      margin-bottom: 1rem;
+    }
   }
 `;
 
 const AboutMe = () => {
   return (
-    <StyledDiv>
+    <StyledSection>
       <TextHeading
         content=" About Me"
         weight="600"
-        className="about-me"
+        className="title"
         textColor="grey-text"
-        style={{justifyContent: "center",    marginBottom: "3rem"}}
+        style={{
+          justifyContent: "center",
+        }}
       />
-      <div className="content flex-spaced">
+      <div className="about-content flex-spaced">
         <div className="aboutme-text flex-column-spaced ">
           <p style={{ width: `80%`, lineHeight: "30px" }}>
             I'm a Software engineer skilled at replicating user interface
@@ -136,7 +139,7 @@ const AboutMe = () => {
         </div>
         <img src={alex} alt="my face" className="my-image" />
       </div>
-    </StyledDiv>
+    </StyledSection>
   );
 };
 
