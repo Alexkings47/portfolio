@@ -60,27 +60,9 @@ const StyledHeader = styled.header`
     }
   }
 `;
-function debounce(fn, ms) {
-  let timer;
-  return () => {
-    clearTimeout(timer);
-    timer = setTimeout(fn, ms);
-  };
-}
 
-const Header = () => {
-  const [screen, setScreen] = useState(window.innerWidth);
-  useEffect(() => {
-    const debouncedHandleResize = debounce(function resize() {
-      setScreen(window.innerWidth);
-    }, 1000);
-
-    window.addEventListener("resize", debouncedHandleResize);
-
-    return () => {
-      window.removeEventListener("resize", debouncedHandleResize);
-    };
-  }, []);
+const Header = ({screen}) => {
+ 
 
   return (
     <StyledHeader  className="flex-column-spaced">

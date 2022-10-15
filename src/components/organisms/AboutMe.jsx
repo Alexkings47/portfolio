@@ -67,6 +67,7 @@ const StyledSection = styled.section`
   }
 
   @media (max-width: 650px) {
+    
     .about-me {
       font-size: 90px;
       align-items: center;
@@ -89,7 +90,7 @@ const StyledSection = styled.section`
   }
 `;
 
-const AboutMe = () => {
+const AboutMe = ({screen}) => {
   return (
     <StyledSection>
       <TextHeading
@@ -103,7 +104,7 @@ const AboutMe = () => {
       />
       <div className="about-content flex-spaced">
         <div className="aboutme-text flex-column-spaced ">
-          <p style={{ width: `80%`, lineHeight: "30px" }}>
+          <p style={{ width: screen?"100%":"80%", lineHeight: "30px" }}>
             I'm a Software engineer skilled at replicating user interface
             designs into functional code. I have an in-depth understanding of
             HTML, CSS, JavaScript, and user interface/user experience

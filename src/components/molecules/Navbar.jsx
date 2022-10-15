@@ -9,14 +9,13 @@ const StyledNav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100vw;
+  width: 100%;
   padding: 0 2rem;
   height: 5rem;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 40;
-
   span {
     font-size: 40px;
   }
@@ -27,9 +26,6 @@ const Navbar = ({ setTheme, theme }) => {
     <StyledNav
       style={{
         color: theme ? "white" : "var(--blue)",
-        // background: theme
-        //   ? "linear-gradient(var(--purple-background), var(--purple-background) ), url(${star}) no-repeat center"
-        //   : "linear-gradient(var(--white), var(--white) )",
       }}
     >
       <Typography textColor={"cyan"} size="40">

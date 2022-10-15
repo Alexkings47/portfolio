@@ -18,7 +18,7 @@ const StyledDiv = styled.div`
   position: fixed;
   top:0;
   left: 0;
-  margin-left: -8rem;
+  margin-left: -8.5rem;
   animation: move linear 4s none infinite;
   animation-delay: 3000ms;
 
