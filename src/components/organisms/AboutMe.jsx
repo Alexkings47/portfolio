@@ -53,6 +53,9 @@ const StyledSection = styled.section`
     list-style-type: none;
   }
 
+  .skills > li {
+  }
+
   .skills-link,
   .skills-link:visited,
   .skills-link:link {
@@ -67,7 +70,6 @@ const StyledSection = styled.section`
   }
 
   @media (max-width: 650px) {
-    
     .about-me {
       font-size: 90px;
       align-items: center;
@@ -84,13 +86,12 @@ const StyledSection = styled.section`
     .my-image {
       width: 14rem;
     }
-    .title{
-      margin-bottom: 1rem;
+    
     }
   }
 `;
 
-const AboutMe = ({screen}) => {
+const AboutMe = ({ screen }) => {
   return (
     <StyledSection>
       <TextHeading
@@ -104,7 +105,7 @@ const AboutMe = ({screen}) => {
       />
       <div className="about-content flex-spaced">
         <div className="aboutme-text flex-column-spaced ">
-          <p style={{ width: screen?"100%":"80%", lineHeight: "30px" }}>
+          <p style={{ width: screen ? "100%" : "80%", lineHeight: "30px" }}>
             I'm a Software engineer skilled at replicating user interface
             designs into functional code. I have an in-depth understanding of
             HTML, CSS, JavaScript, and user interface/user experience
